@@ -69,6 +69,7 @@
     "normalize.css": "^8.0.1",
     "rxjs": "~6.5.1",
     "swarm-numberformat": "^0.4.0",
+    "ts-node": "~7.0.0",
     "tslib": "^1.9.0",
     "tslint-config-prettier": "^1.18.0",
     "typed-web-workers": "^3.0.0-next",
