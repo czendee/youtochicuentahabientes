@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js && npm run make-themes && npm run compileCompResult && ng serve --open",
-    "start:prod": "npm run make-themes && npm run compileCompResult && ng serve --open --prod",
+    "start": " npm run make-themes && npm run compileCompResult && node server.js ",
+    "start:prod": "npm run make-themes && npm run compileCompResult && node server.js ",
     "build": "npm run make-themes && npm run compileCompResult && ng build --prod --aot --build-optimizer --base-href ./",
     "test": "npm run compileCompResult && ng test",
     "test:watch": "ng test --watch",
