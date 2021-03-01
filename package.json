@@ -13,7 +13,7 @@
     "lint:fix": "ng lint IdleSpace --fix",
     "e2e": "ng e2e",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "compileCompResult": " npm i typescript && npm run tsc && tsc  -p myTsconfig.json && npm run merge && npm run merge2",
+    "compileCompResult": " npm install -g tsc && npm install - g concurrently && npm install -g  typescript && npm run tsc && tsc  -p myTsconfig.json && npm run merge && npm run merge2",
     "analyze": "ng build --prod --stats-json --build-optimizer=false && webpack-bundle-analyzer dist/IdleSpace/stats.json",
     "make-themes": "node-sass ./src/themes --output ./src/assets --output-style compressed",
     "stylelint": "stylelint 'src/**/*.scss' --fix",
