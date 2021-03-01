@@ -71,7 +71,8 @@
     "tslib": "^1.9.0",
     "tslint-config-prettier": "^1.18.0",
     "typed-web-workers": "^3.0.0-next",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "express":"*"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.7",
