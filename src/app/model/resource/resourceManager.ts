@@ -393,9 +393,9 @@ export class ResourceManager implements ISalvable {
     buyMetalMine.afterBuy = () => {
       this.metalX1.reloadLimit();
     };
-    buyMetalMine.name = "Metal Mine";
+    buyMetalMine.name = "Data Center";
     buyMetalMine.description =
-      "A Metal Mine allows you to buy more mining drones";
+      "A Big Data Center  allows you to buy more Data Engineers hours";
     this.metalX1.actions.push(buyMetalMine);
     this.metalX1.limitStorage = buyMetalMine;
     this.metalX1.prestigeLimit = AllSkillEffects.PLUS_METAL_MINER;
@@ -412,9 +412,9 @@ export class ResourceManager implements ISalvable {
     buyCrystalMine.afterBuy = () => {
       this.crystalX1.reloadLimit();
     };
-    buyCrystalMine.name = "Crystal Mine";
+    buyCrystalMine.name = "Designer Center";
     buyCrystalMine.description =
-      "An Crystal Mine allows you to buy more crystal drones";
+      "An Designer Center allows you to buy more Mechatronic Engineer's hours";
     this.crystalX1.actions.push(buyCrystalMine);
     this.crystalX1.limitStorage = buyCrystalMine;
     this.crystalX1.prestigeLimit = AllSkillEffects.PLUS_CRYSTAL_MINER;
@@ -431,9 +431,9 @@ export class ResourceManager implements ISalvable {
     buyEnergyPlant.afterBuy = () => {
       this.energyX1.reloadLimit();
     };
-    buyEnergyPlant.name = "Energy Plant";
+    buyEnergyPlant.name = "Research Center";
     buyEnergyPlant.description =
-      "An Energy Plant allows you to buy more technicians";
+      "An Research Centert allows you to buy more Researchers hours";
     this.energyX1.actions.push(buyEnergyPlant);
     this.energyX1.limitStorage = buyEnergyPlant;
     this.energyX1.prestigeLimit = AllSkillEffects.PLUS_ENERGY;
@@ -469,9 +469,9 @@ export class ResourceManager implements ISalvable {
     buyFoundry.afterBuy = () => {
       this.alloyX1.reloadLimit();
     };
-    buyFoundry.name = "Alloy Foundry";
+    buyFoundry.name = "Assemble Workshop";
     buyFoundry.description =
-      "An Alloy Foundry allows you to buy more foundry drones";
+      "An Assemble Workshop allows you to buy more Assemble Technicians";
     this.alloyX1.actions.push(buyFoundry);
     this.alloyX1.limitStorage = buyFoundry;
     this.alloyX1.prestigeLimit = AllSkillEffects.PLUS_ALLOY;
@@ -489,7 +489,7 @@ export class ResourceManager implements ISalvable {
       this.shipyardX1.reloadLimit();
     };
     buyShipyard.name = "Shipyard";
-    buyShipyard.description = "A Shipyard allows you to buy more worker drones";
+    buyShipyard.description = "A Shipyard allows you to buy more Builder Engineeer's hours";
     this.shipyardX1.actions.push(buyShipyard);
     this.shipyardX1.limitStorage = buyShipyard;
     this.shipyardX1.prestigeLimit = AllSkillEffects.PLUS_WORKER;
