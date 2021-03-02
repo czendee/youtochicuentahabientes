@@ -1,13 +1,13 @@
 export const descriptions = {
   resources: {
-    m: ["Metal", "Metal is used for drones and building."],
+    m: ["Data", "Big Data is analized to build protypes of components for robots and buildings."],
     c: [
-      "Crystal",
-      "Crystal is used for drones and building, generally used for technological things."
+      "Designs",
+      "Designs are used to build prototypes of robots, circuits  and building, generally used for technological things."
     ],
     a: [
-      "Alloy",
-      "Alloy used to build ships and some buildings, it's made from metal and crystal."
+      "Mechatronic componets",
+      "Mecha are used to build robots, circuits and buildings based on prototypes, it's made from Big data and Designs."
     ],
     e: ["Energy", "Drones consume energy to do their jobs."],
     f: [
@@ -16,10 +16,10 @@ export const descriptions = {
     ],
     b: ["Battery", "Batteries increase your maximum energy storage."],
     i: ["Missile", "Interplanetary missiles destroy enemy defense."],
-    m1: ["Mining Drone", "Metal Mining Drone, yields metal."],
-    c1: ["Crystal Drone", "Crystal Mining Drone, yields crystal."],
-    a1: ["Foundry Drone", "Foundry Drone convert metal and crystal to alloy."],
-    e1: ["Technician", "Technicians yields energy."],
+    m1: ["Data Engineer", "Data Mining Scientis, yields Data for the missions and mechas desings."],
+    c1: ["Mechatronic Engineer", "Mecha Engineer, yields designs for Mechatronic Components."],
+    a1: ["Assembler Technitian", "Assembler Tech convert designs and blueprints into Mechatronic Components to be used in robots, circuit, solutions and buildings."],
+    e1: ["Researcher Engineer", "Researcher Engineer take  Data and designs to test them and to yields blueprints and instructions to assemble robots, circuits, solutions and buildings."],
     hs: [
       "Habitable Space",
       "Space for buildings. You can obtain more Habitable Space from battle."
@@ -34,22 +34,22 @@ export const descriptions = {
     ],
     f1: ["Computing Unit", ""],
     N: ["Naval Capacity", ""],
-    S1: ["Worker Drone", "Worker Drone makes ships and ships upgrades."],
+    S1: ["Builder Engineer", "Builder Engineer follow the blueprnts and instructions to makes robots, circuits, ships and ships upgrades."],
     SP: [
       "Shipyard Prog.",
       "This represent work done by your Shipyard. It's available only when you make or upgrade ships."
     ],
     X1: [
       "Searching Drone",
-      "Searching Drone allow you to search for new enemies."
+      "Searching Drone allow you to search for materials and moon data."
     ],
     XP: [
       "Searching Prog.",
       "This represent work done by your Searching Drone. It's available only when you are searching for new targets."
     ],
     W1: [
-      "Warrior Drone",
-      "Warrior Drone increase your maximum naval capacity, allowing you to make more ships."
+      "Third-Party Builder",
+      "Third-Party Builder increase your maximum building capacity, allowing you to make more ships."
     ],
     i1: ["Missile Factory", ""],
     F: ["Robot Factory", "Robot Factory make robots."],
