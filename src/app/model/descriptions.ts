@@ -9,7 +9,7 @@ export const descriptions = {
       "Mechatronic componets",
       "Mecha are used to build robots, circuits and buildings based on prototypes, it's made from Big data and Designs."
     ],
-    e: ["Energy", "Drones consume energy to do their jobs."],
+    e: ["Energy", "Engineers consume energy to do their jobs."],
     f: [
       "Computing",
       "Computing is processing power. It cannot be stored but instead, if unused, is used for researching."
@@ -22,19 +22,19 @@ export const descriptions = {
     e1: ["Researcher Engineer", "Researcher Engineer take  Data and designs to test them and to yields blueprints and instructions to assemble robots, circuits, solutions and buildings."],
     hs: [
       "Habitable Space",
-      "Space for buildings. You can obtain more Habitable Space from battle."
+      "Space for buildings. You can obtain more Habitable Space from adquisitions."
     ],
     md: [
-      "Mining District",
-      "Space for metal mines. You can obtain more Mining District from battle."
+      "Data Processing Center",
+      "Space for Data Processing. You can obtain more Data Processing Center from adquisitions."
     ],
     cd: [
-      "Crystal District",
-      "Space for crystal mines. You can obtain more Crystal District from battle."
+      "Designer Center",
+      "Space for Designers. You can obtain more Dwesign Centers from adquisitions."
     ],
     f1: ["Computing Unit", ""],
     N: ["Naval Capacity", ""],
-    S1: ["Builder Engineer", "Builder Engineer follow the blueprnts and instructions to makes robots, circuits, ships and ships upgrades."],
+    S1: ["Builder Engineer", "Builder Engineer follow the blueprints and instructions to makes robots, circuits, ships and ships upgrades."],
     SP: [
       "Shipyard Prog.",
       "This represent work done by your Shipyard. It's available only when you make or upgrade ships."
@@ -67,8 +67,8 @@ export const descriptions = {
       "Increase production of Mining Drones by 100%, stack additive."
     ],
     cM: [
-      "Crystal purification plant",
-      "Increase production of Crystal Drones by 100%, stack additive."
+      "Designs purification plant",
+      "Increase production of Designs by 100%, stack additive."
     ],
     eM: [
       "Electrical grid",
