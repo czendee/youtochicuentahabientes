@@ -69,7 +69,7 @@ export class Resource extends AbstractUnlockable
   unlockedAutomators = new Array<Automator>();
   automators2 = new Array<Automator>();
   unlockedAutomators2 = new Array<Automator>();
-  automation1Name = "Drone Automation";
+  automation1Name = "Engineer Hiring Automation";
   automation2Name = "Expansion Automation";
   modPrestige: SkillEffect;
 
