@@ -690,7 +690,7 @@ export class ResourceManager implements ISalvable {
     );
     this.tierGroups = [
       this.matGroup,
-      new ResourceGroup("1", "Robots", "robot", this.tier1),
+      new ResourceGroup("1", "HResources", "robot", this.tier1),
       new ResourceGroup("2", "Buildings", "building", this.tier2),
       new ResourceGroup("5", "Civilian Ships", "satellite", this.civilianShips),
       new ResourceGroup("4", "Districts", "world", this.districts)
