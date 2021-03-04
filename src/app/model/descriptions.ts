@@ -34,7 +34,7 @@ export const descriptions = {
     ],
     f1: ["Computing Unit", ""],
     N: ["Naval Capacity", ""],
-    S1: ["Builder Engineer", "Builder Engineer follow the blueprints and instructions to make robots, circuits, mission designs and execute missions."],
+    S1: ["Mission Engineer", "Builder Engineer use  robots, circuits, simualtions and data to design  missions and  provide story board for the Missions."],
     SP: [
       "Missions Design.",
       "This represent work done by your Missions Design Team. It's available only when you make or upgrade Missions designs."
