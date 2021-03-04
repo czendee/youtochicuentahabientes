@@ -1,7 +1,7 @@
 <div *ngIf="!design; else designEditor">
   <h1>
     <clr-icon shape="ruler-pencil" size="48" class="resIcon"></clr-icon>
-    Create new Ship Design
+    Create new Mission Design
   </h1>
   <br />
 
@@ -48,7 +48,7 @@
         </clr-input-container>
 
         <clr-select-container>
-          <label>Ship Type</label>
+          <label>Mission Type</label>
           <select clrSelect name="shipType" [(ngModel)]="type" required>
             <option
               *ngFor="let tp of unlockedShips; trackBy: typeId"
@@ -106,7 +106,7 @@
             </td>
           </tr>
           <tr>
-            <td class="left">Total Ships:</td>
+            <td class="left">Total Mission:</td>
             <td>
               <app-formatted-quantity
                 [quantity]="ms.game.fleetManager.totalShips"
@@ -122,7 +122,7 @@
       <table class="table table-vertical table-noborder table-compact">
         <tbody>
           <tr>
-            <th>Ship</th>
+            <th>Mission</th>
             <th>Naval Capacity</th>
           </tr>
           <tr *ngFor="let tp of unlockedShips; trackBy: typeId">
