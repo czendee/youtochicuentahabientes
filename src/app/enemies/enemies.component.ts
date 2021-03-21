@@ -9,6 +9,9 @@ import { MainService } from "../main.service";
 import { Enemy } from "../model/enemy/enemy";
 import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
 import { OptionsService } from "../options.service";
+import { RestApiService } from "../shared/rest-api.service";
+import { Employee } from "../shared/employee";
+
 declare let preventScroll;
 @Component({
   selector: "app-enemies",
@@ -17,13 +20,25 @@ declare let preventScroll;
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EnemiesComponent implements OnInit, AfterViewInit {
+  
+  Employee: any = [];
+  
   @HostBinding("class")
   contentContainer = "content-container";
 
-  constructor(public ms: MainService, public os: OptionsService) {}
+  constructor(public ms: MainService, public os: OptionsService, public restApi: RestApiService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loadEmployees()
+  }
 
+  // Get employees list
+  loadEmployees() {
+    return this.restApi.getEmployees().subscribe((data: {}) => {
+      this.Employee = data;
+    })
+  }
+  
   getEnemyId(index: number, enemy: Enemy) {
     return enemy.id;
   }
