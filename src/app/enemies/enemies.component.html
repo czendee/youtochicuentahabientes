@@ -4,11 +4,11 @@
   [clr-nav-level]="2"
   class="nav-trigger--bottom"
   cdkDropList
-  [cdkDropListData]="ms.game.enemyManager.allEnemy"
+  [cdkDropListData]="Employee"
   (cdkDropListDropped)="drop($event)"
 >
   <a clrVerticalNavLink routerLink="./search" routerLinkActive="active">
-    <clr-icon shape="plus"></clr-icon> Search</a
+    <clr-icon shape="plus"></clr-icon> Search Data Source</a
   >
   <a
     cdkDrag
@@ -16,30 +16,30 @@
     [routerLink]="'./view/' + en.id"
     routerLinkActive="active"
     class="movable enemyLine"
-    *ngFor="let en of ms.game.enemyManager.allEnemy; trackBy: getEnemyId"
+    *ngFor="let empleado of Employee"
   >
-    <clr-icon [attr.shape]="en.shape"></clr-icon>
+    <clr-icon [attr.shape]="empleado.shape"></clr-icon>
 
-    {{ en.name }}
+    {{ empleado.name }}
     <!-- <span class="badge badge-info" *ngIf="en.bonusCount > 0">{{
       en.bonusCount
     }}</span> -->
-
-    <span *ngIf="en.baseMining > 0" class="badge badge-info">{{
-      en.baseMining
+    
+    <span *ngIf="empleado.baseMining > 0" class="badge badge-info">{{
+      empleado.baseMining
     }}</span>
-    <span *ngIf="en.baseCrystal > 0" class="badge badge-success">{{
-      en.baseCrystal
+    <span *ngIf="empleado.baseCrystal > 0" class="badge badge-success">{{
+      empleado.baseCrystal
     }}</span>
-    <span *ngIf="en.baseHabitable > 0" class="badge badge-warning">{{
-      en.baseHabitable
+    <span *ngIf="empleado.baseHabitable > 0" class="badge badge-warning">{{
+      empleado.baseHabitable
     }}</span>
-    <span *ngIf="en.baseRobot > 0" class="badge badge-danger">{{
-      en.baseRobot
+    <span *ngIf="empleado.baseRobot > 0" class="badge badge-danger">{{
+      empleado.baseRobot
     }}</span>
 
     <span class="level">
-      {{ en.level }}
+      {{ empleado.level }}
     </span>
   </a>
 </clr-vertical-nav>
