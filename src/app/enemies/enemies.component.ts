@@ -9,8 +9,8 @@ import { MainService } from "../main.service";
 import { Enemy } from "../model/enemy/enemy";
 import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
 import { OptionsService } from "../options.service";
-import { RestApiService } from "/shared/rest-api.service";
-import { Employee } from "/shared/employee";
+import { RestApiService } from "shared/rest-api.service";
+import { Employee } from "shared/employee";
 
 declare let preventScroll;
 @Component({
