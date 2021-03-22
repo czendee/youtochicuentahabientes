@@ -1,4 +1,4 @@
-mport { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Employee } from '../shared/employee';
 import { Observable, throwError } from 'rxjs';
