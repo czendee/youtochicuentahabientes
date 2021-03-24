@@ -21,6 +21,7 @@ import { EndInPipe } from "./end-in.pipe";
 import { PolynomComponent } from "./polynom/polynom.component";
 import { FormsModule } from "@angular/forms";
 import { OptionsService } from "./options.service";
+import { RestApiService } from "./rest-api.service";
 import { FormattedQuantityComponent } from "./formatted-quantity/formatted-quantity.component";
 import { LabComponent } from "./lab/lab.component";
 import { DragDropModule } from "@angular/cdk/drag-drop";
