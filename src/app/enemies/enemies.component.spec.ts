@@ -6,6 +6,7 @@ import { EndInPipe } from "../end-in.pipe";
 import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { MainService } from "../main.service";
 import { OptionsService } from "../options.service";
+import { RestApiService } from "../rest-api.service";
 import { defaultImport } from "../app.component.spec";
 
 describe("EnemiesComponent", () => {
@@ -17,7 +18,7 @@ describe("EnemiesComponent", () => {
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: defaultImport(),
       declarations: [EnemiesComponent, FormatPipe, EndInPipe],
-      providers: [MainService, OptionsService]
+      providers: [MainService, OptionsService, RestApiService]
     }).compileComponents();
   }));
 
