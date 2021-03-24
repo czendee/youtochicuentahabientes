@@ -28,7 +28,7 @@ export class RestApiService {
 
   // HttpClient API get() method => Fetch employees list
   getEmployees(): Observable<Employee> {
-    return this.http.get<Employee>(this.apiURL + '/youtochi/datasources')
+    return this.http.get<Employee>(this.apiURL + 'youtochi/datasources')
     .pipe(
       retry(1),
       catchError(this.handleError)
