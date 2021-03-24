@@ -21,6 +21,9 @@ import { EndInPipe } from "./end-in.pipe";
 import { PolynomComponent } from "./polynom/polynom.component";
 import { FormsModule } from "@angular/forms";
 import { OptionsService } from "./options.service";
+// HttpClient module for RESTful API
+import { HttpClientModule } from '@angular/common/http';
+
 import { FormattedQuantityComponent } from "./formatted-quantity/formatted-quantity.component";
 import { LabComponent } from "./lab/lab.component";
 import { DragDropModule } from "@angular/cdk/drag-drop";
@@ -157,6 +160,7 @@ import { LabAutoComponent } from './lab/lab-auto/lab-auto.component';
     AppRoutingModule,
     ClarityModule,
     FormsModule,
+    HttpClientModule,
     DragDropModule,
     ToastrModule.forRoot({
       positionClass: "toast-bottom-right"
