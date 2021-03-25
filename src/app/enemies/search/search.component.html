@@ -1,6 +1,6 @@
 <h1>
   <clr-icon shape="world" size="48" class="resIcon"></clr-icon>
-  Search new worlds
+  Search Data About the Moon and Beyond
 </h1>
 
 <clr-tabs>
@@ -12,13 +12,12 @@
           class="clr-col-12	clr-col-sm-12	clr-col-md-12	clr-col-lg-6 clr-col-xl-6"
         >
           <p>
-            Here you can search for new worlds.
+            Here you can search moon data from Data Sources all over the world. And Dereum Data as well.
             <span>
               Max level:
               {{ ms.game.enemyManager.maxLevel }} </span
             ><br />
-            You can select up to three more district options at time, if you
-            have the prestige.
+            You can select Dereum Public Data or  Propietary Data, and also Public Data by Space Agencies.
           </p>
 
           <clr-alert
@@ -200,21 +199,21 @@
               (click)="generate()"
               [disabled]="!isValid()"
             >
-              Search
+              Public Data
             </button>
             <button
               class="btn btn-warning"
               (click)="deleteModal = true"
               [disabled]="ms.game.enemyManager.allEnemy.length === 0"
             >
-              Mass Delete
+              Dereum Public
             </button>
             <button
               class="btn btn-danger"
               (click)="deleteAllModal = true"
               [disabled]="ms.game.enemyManager.allEnemy.length === 0"
             >
-              Delete All
+              Dereum Propietary
             </button>
           </div>
           <br />
