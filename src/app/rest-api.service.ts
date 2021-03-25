@@ -11,7 +11,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class RestApiService {
   
   // Define API
-  apiURL = 'http://peaceful-retreat-91246.herokuapp.com/';
+  apiURL = 'https://peaceful-retreat-91246.herokuapp.com/';
 
   constructor(private http: HttpClient) { }
 
