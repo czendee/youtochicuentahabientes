@@ -1,60 +1,42 @@
 <h1>
   <clr-icon
-    [attr.shape]="enemy.shape"
-    *ngIf="enemy?.shape"
+    [attr.shape]="unoempleado.shape"
+    *ngIf="unoempleado?.shape"
     size="48"
     class="resIcon"
   ></clr-icon>
-  {{ enemy?.name }}
+  {{ unoempleado?.name }}
 </h1>
-<div *ngIf="enemy" class="clr-row">
+<div *ngIf="unoempleado" class="clr-row">
   <div class="clr-col-6">
     <p>
-      Level: {{ enemy.level }}
+      Level: {{ unoempleado.level }}
       <br />
       Fleet Power:
       <app-formatted-quantity
-        [quantity]="enemy.totalFleetPower"
+        [quantity]="unoempleado.level"
       ></app-formatted-quantity>
-    </p>
-    <p *ngIf="enemy.bonusCount > 0">
-      <span class="label label-info" *ngIf="enemy.moreMetal"
-        >More Metal District</span
-      >
-      <span class="label label-success" *ngIf="enemy.moreCrystal"
-        >More Crystal District</span
-      >
-      <span class="label label-warning" *ngIf="enemy.moreHabitableSpace"
-        >More Habitable Space</span
-      >
-      <span class="label label-warning" *ngIf="enemy.moreHabitableSpace2"
-        >More Habitable Space</span
-      >
-      <span class="label label-danger" *ngIf="enemy.moreRobot"
-        >More Robot c.</span
-      >
     </p>
     <p>
       <span class="label label-info"
         >Metal District
-        {{ enemy.baseMining }}
+        {{ unoempleado.baseMining }}
       </span>
       <span class="label label-success"
-        >Crystal District {{ enemy.baseCrystal }}</span
+        >Crystal District {{ unoempleado.baseCrystal }}</span
       >
       <span class="label label-warning"
-        >Habitable Space {{ enemy.baseHabitable }}</span
+        >Habitable Space {{ unoempleado.baseHabitable }}</span
       >
-      <span class="label label-danger">Robot c. {{ enemy.baseRobot }}</span>
+      <span class="label label-danger">Robot c. {{ unoempleado.baseRobot }}</span>
     </p>
     <br />
     <div class="btn-group btn-primary">
       <button
         class="btn btn-success"
         (click)="attack()"
-        [disabled]="ms.game.enemyManager.currentEnemy"
       >
-        Attack
+        Attrackon
       </button>
       <button class="btn" (click)="move(-1)">Move Up</button>
       <button class="btn" (click)="move(1)">Move Down</button>
@@ -64,32 +46,16 @@
     </div>
     <br />
     <br />
-    <clr-alert
-      [clrAlertType]="'info'"
-      *ngIf="ms.game.enemyManager.currentEnemy"
-    >
-      <clr-alert-item>
-        <span class="alert-text">
-          You cannot attack {{ enemy.name }} because you are already at war with
-          <a [routerLink]="'/battle'"
-            >{{ ms.game.enemyManager.currentEnemy.name }}
-          </a>
-          <br />
-          You can surrender and change enemy anytime on the
-          <a [routerLink]="'/battle'">battle page</a>
-        </span>
-      </clr-alert-item>
-    </clr-alert>
   </div>
   <div class="clr-col-6">
     <h4>Ships:</h4>
-    <app-fleet-table [fleet]="enemy.shipsDesign"></app-fleet-table>
+    <app-fleet-table [fleet]="unoempleado.level"></app-fleet-table>
   </div>
 </div>
 
 <!-- Delete enemy modal -->
 <clr-modal [(clrModalOpen)]="deleteModal">
-  <h3 class="modal-title">Delete {{ enemy?.name }}</h3>
+  <h3 class="modal-title">Delete {{ unoempleado?.name }}</h3>
   <div class="modal-body">
     <p>This cannot be undone</p>
   </div>
