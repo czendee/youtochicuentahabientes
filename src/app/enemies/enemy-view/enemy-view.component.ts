@@ -15,6 +15,8 @@ import { ShipDesign } from "src/app/model/fleet/shipDesign";
 import { Module } from "src/app/model/fleet/module";
 declare let preventScroll;
 import { moveItemInArray } from "@angular/cdk/drag-drop";
+import { RestApiService } from "../rest-api.service";
+import { Employee } from "../employee";
 
 @Component({
   selector: "app-enemy-view",
@@ -26,6 +28,11 @@ export class EnemyViewComponent implements OnInit, OnDestroy, AfterViewInit {
   @HostBinding("class")
   contentArea = "content-area";
   enemy: Enemy;
+  
+  unoempleado: Employee;
+  
+  empleaditos: any = [];
+  
   private subscriptions: Subscription[] = [];
   deleteModal = false;
 
@@ -33,12 +40,14 @@ export class EnemyViewComponent implements OnInit, OnDestroy, AfterViewInit {
     public ms: MainService,
     private route: ActivatedRoute,
     private cd: ChangeDetectorRef,
-    private router: Router
+    private router: Router,
+    public restApi: RestApiService
   ) {}
 
   ngOnInit() {
     this.subscriptions.push(
-      this.route.params.subscribe(this.getEnemy.bind(this))
+//      this.route.params.subscribe(this.getEnemy.bind(this))
+      this.route.params.subscribe(this.getOneEmpleado.bind(this))      
     );
   }
   ngAfterViewInit(): void {
@@ -46,6 +55,20 @@ export class EnemyViewComponent implements OnInit, OnDestroy, AfterViewInit {
   }
   ngOnDestroy() {
     this.subscriptions.forEach((sub: Subscription) => sub.unsubscribe());
+  }
+  
+
+
+  getOneEmpleado(params: any) {
+    this.unoempleado = null;
+    const id = params.id;
+    return this.restApi.getEmployees().subscribe((data: {}) => {
+         this.empleaditos = data;
+         const b = this.empleaditos.find(u => u.id == id);
+         if (b instanceof Employee) this.unoempleado = b;
+      
+    });
+    
   }
   getEnemy(params: any) {
     this.enemy = null;
