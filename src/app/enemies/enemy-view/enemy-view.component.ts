@@ -15,8 +15,8 @@ import { ShipDesign } from "src/app/model/fleet/shipDesign";
 import { Module } from "src/app/model/fleet/module";
 declare let preventScroll;
 import { moveItemInArray } from "@angular/cdk/drag-drop";
-import { RestApiService } from "../rest-api.service";
-import { Employee } from "../employee";
+import { RestApiService } from "src/app/rest-api.service";
+import { Employee } from "src/app/employee";
 
 @Component({
   selector: "app-enemy-view",
