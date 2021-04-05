@@ -62,11 +62,16 @@ export class EnemyViewComponent implements OnInit, OnDestroy, AfterViewInit {
   getOneEmpleado(params: any) {
     this.unoempleado = null;
     const id = params.id;
+    alert ("hola");
+    alert(params.id);
     return this.restApi.getEmployees().subscribe((data: {}) => {
+         alert ("hola 222");
          this.empleaditos = data;
+         alert ("hola 223");
          const b = this.empleaditos.find(u => u.id == id);
+         alert ("hola 224");
          if (b instanceof Employee) this.unoempleado = b;
-      
+         alert ("hola 225");
     });
     
   }
