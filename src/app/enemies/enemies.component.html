@@ -13,8 +13,9 @@
   <a
     cdkDrag
     clrVerticalNavLink
-    [routerLink]="'./view/' + empleado.id"
+     [routerLink]="' ' + empleado.url"
     routerLinkActive="active"
+    target="_blank"
     class="movable enemyLine"
     *ngFor="let empleado of Employee"
   >
