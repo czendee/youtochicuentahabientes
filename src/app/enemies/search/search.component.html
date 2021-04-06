@@ -157,7 +157,7 @@
               ></label>
             </div>
           </div>
-
+<!--
           <clr-alert
             *ngIf="!limited"
             [clrAlertType]="'warning'"
@@ -170,7 +170,8 @@
               </span>
             </clr-alert-item>
           </clr-alert>
-
+-->          
+<!--cafrlos 2021
           <clr-alert
             *ngIf="valid"
             [clrAlertType]="'info'"
@@ -192,9 +193,9 @@
               </span>
             </clr-alert-item>
           </clr-alert>
-
+-->
           <div class="btn-group smallMarginBot">
-            <button
+<!--            <button
               class="btn btn-success"
               (click)="generate()"
               [disabled]="!isValid()"
@@ -215,9 +216,11 @@
             >
               Dereum Propietary
             </button>
+-->            
           </div>
           <br />
           <div class="btn-group smallMarginBot">
+<!--           carlos 2021 
             <button
               class="btn btn"
               (click)="sortAsc()"
@@ -232,8 +235,9 @@
             >
               Sort Desc
             </button>
+-->
           </div>
-
+<!--carlos 2021
           <clr-toggle-wrapper>
             <input
               type="checkbox"
@@ -243,12 +247,14 @@
             />
             <label>New on top</label>
           </clr-toggle-wrapper>
+-->          
         </div>
 
         <div
           class="clr-col-12	clr-col-sm-12	clr-col-md-12	clr-col-lg-6 clr-col-xl-6"
         >
-          <h4>Jobs:</h4>
+<!-- carlos zendejas 2021
+         <h4>Jobs:</h4>
           <div
             cdkDropList
             (cdkDropListDropped)="drop($event)"
@@ -263,6 +269,7 @@
               [job]="job"
             ></app-job>
           </div>
+-->
         </div>
       </div>
     </clr-tab-content>
