@@ -1,4 +1,4 @@
-export class Datatool {
+export class Youtochidatatool {
    id: number;
    name: string;
    url: string;
