@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Employee } from './employee';
+import { Youtochidatasource } from './youtochidatasource';
+import { Youtochidatatool } from './youtochidatatool';
+import { Youtochidataflow } from './youtochidataflow';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
@@ -34,6 +37,35 @@ export class RestApiService {
       catchError(this.handleError)
     )
   }
+ 
+  // HttpClient API get() method => Fetch datasource list
+  getDatasources(): Observable<Youtochidatasource> {
+    return this.http.get<Youtochidatasource>(this.apiURL + 'youtochi/datasources')
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+  
+    // HttpClient API get() method => Fetch datatool list
+  getDatatools(): Observable<Youtochidatatool> {
+    return this.http.get<Youtochidatatool>(this.apiURL + 'youtochi/datatools')
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
+    // HttpClient API get() method => Fetch dataflow list
+  getDataflows(): Observable<Youtochidataflow> {
+    return this.http.get<Youtochidataflow>(this.apiURL + 'youtochi/dataflows')
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+  
+ 
 
   // HttpClient API get() method => Fetch employee
   getEmployee(id): Observable<Employee> {
