@@ -1,4 +1,4 @@
-export class Datasource {
+export class Youtochidatasource {
    id: number;
    name: string;
    email: string;
