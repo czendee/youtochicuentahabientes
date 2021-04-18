@@ -38,8 +38,8 @@ export class RestApiService {
     )
   }
  
-  // HttpClient API get() method => Fetch datasource list
-  getDatasources(): Observable<Youtochidatasource> {
+  // HttpClient API get() method => Fetch Youtochidatasource list
+  getYoutochidatasources(): Observable<Youtochidatasource> {
     return this.http.get<Youtochidatasource>(this.apiURL + 'youtochi/datasources')
     .pipe(
       retry(1),
@@ -47,8 +47,8 @@ export class RestApiService {
     )
   }
   
-    // HttpClient API get() method => Fetch datatool list
-  getDatatools(): Observable<Youtochidatatool> {
+    // HttpClient API get() method => Fetch Youtochidatatool list
+  getYoutochidatatools(): Observable<Youtochidatatool> {
     return this.http.get<Youtochidatatool>(this.apiURL + 'youtochi/datatools')
     .pipe(
       retry(1),
@@ -56,8 +56,8 @@ export class RestApiService {
     )
   }
 
-    // HttpClient API get() method => Fetch dataflow list
-  getDataflows(): Observable<Youtochidataflow> {
+    // HttpClient API get() method => Fetch Youtochidataflow list
+  getYoutochidataflows(): Observable<Youtochidataflow> {
     return this.http.get<Youtochidataflow>(this.apiURL + 'youtochi/dataflows')
     .pipe(
       retry(1),
