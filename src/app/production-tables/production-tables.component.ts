@@ -16,9 +16,9 @@ import { TotalProductionSorter } from "../model/utility/totalProductionSorter";
 import { Subscription } from "rxjs";
 import { RestApiService } from "../rest-api.service";
 import { Employee } from "../employee";
-import { Youtochidatasource } from './youtochidatasource';
-import { Youtochidatatool } from './youtochidatatool';
-import { Youtochidataflow } from './youtochidataflow';
+import { Youtochidatasource } from '../youtochidatasource';
+import { Youtochidatatool } from '../youtochidatatool';
+import { Youtochidataflow } from '../youtochidataflow';
 
 @Component({
   selector: "app-production-tables",
