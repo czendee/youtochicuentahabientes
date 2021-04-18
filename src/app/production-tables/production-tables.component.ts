@@ -16,6 +16,9 @@ import { TotalProductionSorter } from "../model/utility/totalProductionSorter";
 import { Subscription } from "rxjs";
 import { RestApiService } from "../rest-api.service";
 import { Employee } from "../employee";
+import { Youtochidatasource } from './youtochidatasource';
+import { Youtochidatatool } from './youtochidatatool';
+import { Youtochidataflow } from './youtochidataflow';
 
 @Component({
   selector: "app-production-tables",
@@ -32,6 +35,9 @@ export class ProductionTablesComponent
   totalProdSorter = new TotalProductionSorter();
     
   Employee: any = [];
+  Youtochidatasource: any = [];
+  Youtochidatatool: any = [];
+  Youtochidataflow: any = [];
     
   @Input() unit: Resource;
 
@@ -44,6 +50,9 @@ export class ProductionTablesComponent
 
   ngOnInit() {
     this.loadEmployees();
+    this.loadYoutochidatasources();
+    this.loadYoutochidatatools();
+    this.loadYoutochidataflows();
     
     this.subscriptions.push(
       this.ms.em.updateEmitter.subscribe(() => {
@@ -52,12 +61,34 @@ export class ProductionTablesComponent
     );
   }
     
+  // Get Youtochidatasources list
+  loadYoutochidatasources() {
+    return this.restApi.getYoutochidatasources().subscribe((data: {}) => {
+      this.Youtochidatasource = data;
+    })
+  }
+   
   // Get employees list
   loadEmployees() {
     return this.restApi.getEmployees().subscribe((data: {}) => {
       this.Employee = data;
     })
   }
+    
+  // Get Youtochidatatools list
+  loadYoutochidatatools() {
+    return this.restApi.getYoutochidatatools().subscribe((data: {}) => {
+      this.Youtochidatatool = data;
+    })
+  }
+    
+  // Get Youtochidataflows list
+  loadYoutochidataflows() {
+    return this.restApi.getYoutochidataflows().subscribe((data: {}) => {
+      this.Youtochidataflow = data;
+    })
+  }
+    
     
   ngOnDestroy() {
     this.subscriptions.forEach((sub: Subscription) => sub.unsubscribe());
