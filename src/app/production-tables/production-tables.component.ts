@@ -14,6 +14,8 @@ import { Production } from "../model/production";
 import { ProductionSorter } from "../model/utility/productionSorter";
 import { TotalProductionSorter } from "../model/utility/totalProductionSorter";
 import { Subscription } from "rxjs";
+import { RestApiService } from "../rest-api.service";
+import { Employee } from "../employee";
 
 @Component({
   selector: "app-production-tables",
@@ -28,22 +30,35 @@ export class ProductionTablesComponent
   activeProducer = new Array<Production>();
   prodSorter = new ProductionSorter();
   totalProdSorter = new TotalProductionSorter();
-
+    
+  Employee: any = [];
+    
   @Input() unit: Resource;
 
   constructor(
     public ms: MainService,
     private route: ActivatedRoute,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    public restApi: RestApiService
   ) {}
 
   ngOnInit() {
+    this.loadEmployees();
+    
     this.subscriptions.push(
       this.ms.em.updateEmitter.subscribe(() => {
         this.cd.markForCheck();
       })
     );
   }
+    
+  // Get employees list
+  loadEmployees() {
+    return this.restApi.getEmployees().subscribe((data: {}) => {
+      this.Employee = data;
+    })
+  }
+    
   ngOnDestroy() {
     this.subscriptions.forEach((sub: Subscription) => sub.unsubscribe());
   }
