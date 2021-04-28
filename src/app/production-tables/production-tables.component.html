@@ -82,7 +82,7 @@
   </clr-datagrid>
 </div>
 
-<div *ngIf="Employee?.length > 0">
+<div *ngIf="unit.name=== 'Data' &&  Employee?.length > 0">
   <h6>{{ unit.name }} is made using SourceData:</h6>
   <clr-datagrid class="datagrid-compact">
     <clr-dg-column [clrDgField]="'elemployee.name'">Name</clr-dg-column>
@@ -120,7 +120,7 @@
   </clr-datagrid>
 </div>
 
-<div *ngIf="Youtochidatatool?.length > 0">
+<div *ngIf="unit.name=== 'Data' && Youtochidatatool?.length > 0">
   <h6>{{ unit.name }} is made using Tool:</h6>
   <clr-datagrid class="datagrid-compact">
     <clr-dg-column [clrDgField]="'tool.name'">Name</clr-dg-column>
