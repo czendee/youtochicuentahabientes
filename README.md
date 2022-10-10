@@ -1,3 +1,12 @@
+
+# IdleSpace
+youtochicuentahabientes
+
+## ☁️ Deploy from Render.com in the dashboard using czendeQhotmail.com use github czendee
+
+REnder.com will automatically setup an environment and run an instance for you.
+
+
 # IdleSpace
 
 [![Build Status](https://travis-ci.org/scorzy/IdleSpace.svg?branch=master)](https://travis-ci.org/scorzy/IdleSpace)
