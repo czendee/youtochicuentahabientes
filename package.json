@@ -9,7 +9,7 @@
     "ng": "ng",
     "start": " npm run make-themes  && node server.js ",
     "start:prod": "npm run make-themes && npm run compileCompResult && node server.js ",
-    "build": "npm run make-themes && npm run compileCompResult && ng build --prod --aot --build-optimizer --base-href ./",
+    "build": "npm run make-themes && npm run compileCompResult && ng build ",
     "test": "npm run compileCompResult && ng test",
     "test:watch": "ng test --watch",
     "test:coverage": "ng test --code-coverage",
